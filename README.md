@@ -27,7 +27,7 @@ get a warning message saying that *Your connection to this site is not secure*.
 
 **How they look like**: The template includes key fields and information that describes whole x509 certificate.
 
-![Template image](image1.jpg)
+![Template](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/image1.jpg)
 
 **What is Certificate Authority**: Its like a main head of the internet provider, just like a trusted group which signs the certificates.
 
@@ -35,7 +35,7 @@ get a warning message saying that *Your connection to this site is not secure*.
 
 **Architecture of X509 certificate**: 
 
-![Class diagram of x509 certificate](C:\Users\User\OneDrive\Pictures\Other\image2.jpg)
+![Class diagram of x509 certificate](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/image2.jpg)
 
 **What are the terms**:
 
@@ -70,13 +70,13 @@ internet. When we set up a VPN in here, it automatically creates certificates fo
 ### Let’s See What OpenWISP Can Do Currently, Step by Step
 When we visit the website [https://demo.openwisp.io/admin/](https://demo.openwisp.io/admin/) we see a homepage interface with a sidebar menu on the left, main content in the middle-right, and a header on top.
 
-![Home Page](C:\Users\User\OneDrive\Pictures\Other\homepage.jpg)
+![Home Page](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/homepage.jpg)
 
 My major task relates to two content menu items, which deal with X509 certificates and templates:
 
-![Configration menu](C:\Users\User\OneDrive\Pictures\Other\confurationmenu.jpg)
+![Configration menu](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/configuration%20menu.jpg)
 
-![CAs and Certificate menu](C:\Users\User\OneDrive\Pictures\Other\certificatemenu.jpg)
+![CAs and Certificate menu](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/certificate%20menu.jpg)
 
 #### Template section
 
@@ -88,18 +88,18 @@ In the configuration menu, there is a "Template" field. Clicking it reveals an i
 
 [Template Home](https://demo.openwisp.io/admin/config/template/)
 
-![Template home ](C:\Users\User\OneDrive\Pictures\Other\templatefirst.jpg)
+![Template home ](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/templatefirst.jpg)
 
 [Add Template](https://demo.openwisp.io/admin/config/template/add/)
 
-![Add Template ](C:\Users\User\OneDrive\Pictures\Other\templatesecond.jpg)
+![Add Template ](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/templatesecond.jpg)
 
 #### VPN Server Section
 The next section is the VPN server, which shows how certificates are tied to VPNs.
 
 [VPN Server](https://demo.openwisp.io/admin/config/vpn/)
 
-![VPN server ](C:\Users\User\OneDrive\Pictures\Other\vpnserver.jpg)
+![VPN server ](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/vpnserver.jpg)
 
 #### Access Credentials Section
 The access credentials section shows how an organization manages secure connections to devices, with fields like:
@@ -108,14 +108,14 @@ The access credentials section shows how an organization manages secure connecti
 
 [Access Credentials](https://demo.openwisp.io/admin/connection/credentials/)/
 
-![Access credentials](C:\Users\User\OneDrive\Pictures\Other\credentials.jpg)
+![Access credentials](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/credentials.jpg)
 
 #### Device Groups Section
 In the device groups section, we see a list of device groups. Device groups can have VPN templates assigned to them, potentially using templates to organize devices.
 
 [Device Group](https://demo.openwisp.io/admin/config/devicegroup/)
 
-![device group](C:\Users\User\OneDrive\Pictures\Other\devicegroup.jpg)
+![device group](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/devicegroup.jpg)
 
 #### Certificate Authority (CA) Section
 In the CA section, we see a list of Certificate Authorities with columns like:
@@ -130,7 +130,7 @@ If creating a new CA, users can set its duration, key length, etc. This is where
 
 [CA](https://demo.openwisp.io/admin/pki/ca/)
 
-![CA](C:\Users\User\OneDrive\Pictures\Other\ca.jpg)
+![CA](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/CA.jpg)
 
 #### Certificates Section
 In the certificates section, we see a list of X509 certificates with columns like:
@@ -147,9 +147,9 @@ Certificates here are mostly created for OpenVPN (e.g., for VPN servers or clien
 
 [Certificates](https://demo.openwisp.io/admin/pki/cert/)
 
-![certificate 1](C:\Users\User\OneDrive\Pictures\Other\certificatefirst.jpg)
+![certificate 1](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/certificatefirst.jpg)
 
-![certificate 2](C:\Users\User\OneDrive\Pictures\Other\certificatesecond.jpg)
+![certificate 2](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/certificatesecond.jpg)
 
 
 #### Certificates and OpenVPN

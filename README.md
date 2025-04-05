@@ -5,7 +5,7 @@
 2. [Fundamentals](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main#fundamentals)
 3. [Organization and current state](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#organization-and-current-state)
 4. [Approach to Project](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#approach-to-project)
-
+5. [After state](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-how-openwisp-will-look-like-after-this-feature-step-by-step)
 
 ## Project Overview
 The X.509 Certificate Generator Templates aims to enhance the platform by adding a new feature that allows users to create X.509 certificates for secure browsing and other purposes, such as securing websites, or software signing, etc whereas it currently on supporting OpenVPN tunnels. 
@@ -361,7 +361,7 @@ Let’s walk through how the UI will change, focusing on the website dashboard a
 
 
 
-#### References which i have followed
+## References which i have followed
 
 1. <sup>Medium</sup>      (Takahiko Kawasaki)    <ins>Illustrated X.509 Certificate</ins>
 

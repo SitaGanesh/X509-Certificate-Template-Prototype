@@ -1,5 +1,9 @@
 # X509-Certificate-Template-Prototype
 
+## Table of content
+1. [Project Overview](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main#project-overview)
+
+
 ## Project Overview
 The X.509 Certificate Generator Templates aims to enhance the platform by adding a new feature that allows users to create X.509 certificates for secure browsing and other purposes, such as securing websites, or software signing, etc whereas it currently on supporting OpenVPN tunnels. 
 Right now, OpenWISP uses a Certificate Authority (CA) to generate certificates exclusively for OpenVPN, which creates secure tunnels for data but it requires more support use cases like website security as users requests. 
@@ -351,3 +355,42 @@ Let’s walk through how the UI will change, focusing on the website dashboard a
 **What’s New:** No changes to the CA section itself, but new template uses these CAs.
 
 **What It Looks Like:** The CA section remains as is, but the `ca` field in the `Template` model links to these CAs, ensuring they are used when generating certificates via the new template.
+
+
+
+#### References which i have followed
+
+1. <sup>Medium</sup>      (Takahiko Kawasaki)    <ins>Illustrated X.509 Certificate</ins>
+
+    I gained a visual understanding of X.509 certificate structure and templates, as defined in RFC 5280, through detailed diagrams and explanations.
+
+    https://darutk.medium.com/illustrated-x-509-certificate-84aece2c5c2e 
+    ![Certificate Structure](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/certificateStructure.jpg)
+
+
+2. <sup>Medium </sup> (seantywork)    <ins>Fundamentals of Secure Communication X509 Certificate</ins>
+
+    I learned the basics of secure communication using OpenSSL, which provided practical visualization and a strong foundation for understanding X.509 certificates.
+
+    https://medium.com/@seantywork/fundamentals-of-secure-communication-x509-certificate-6bcfd522a5d1
+
+
+3. <sup>YouTube</sup>  (OneMircFifty)     <ins>X.509 Certificate Video (Part 1, with Parts 2 and 3 referenced)</ins>
+
+    I understood X.509 certificates from scratch through a comprehensive video series that broke down concepts step-by-step across multiple parts. 
+
+    https://youtu.be/kAaIYRJoJkc?si=J6U3NlSgPgESEEHn
+
+
+4. <sup>YouTube</sup>   (Secure Soft)     <ins>X.509 Certificate Generator</ins>
+
+    What I Learned: I discovered a multipurpose certificate utility tool by Secure Soft via a short 2-minute video, showcasing how to generate X.509 certificates.
+
+    https://youtu.be/RMy-KPq20Hw?si=HCYmNiZY9Lj9-Rwg
+
+
+5. <sup>Hexdocs</sup>    (X509.Certificate.Template)       <ins>Documentation</ins>
+
+    I explored technical documentation detailing X.509 certificate templates, enhancing my understanding of their programmatic structure and usage.
+
+    https://hexdocs.pm/x509/X509.Certificate.Template.html 

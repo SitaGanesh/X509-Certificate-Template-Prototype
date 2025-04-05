@@ -1,22 +1,28 @@
 # X509-Certificate-Template-Prototype
 
-## Table of content
+## Table of Contents
+
 1. [Project Overview](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main#project-overview)
 2. [Fundamentals](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main#fundamentals)
-3. [Organization and current state](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#organization-and-current-state)
-   - [Let’s See What OpenWISP Can Do Currently](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-what-openwisp-can-do-currently-step-by-step)
-         1. [Template section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#template-section)
-         2. [VPN server section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#vpn-server-section)
-         3. [Access Credential section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#access-credentials-section)
-         4. [Device group section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#device-groups-section)
-         5. [Certificate Authority section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#certificate-authority-ca-section)
-         6. [Certificate section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#certificates-section)
+3. [Organization and Current State](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#organization-and-current-state)
+   - [Let’s See What OpenWISP Can Do Currently, step by step](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-what-openwisp-can-do-currently-step-by-step)
+     1. [Template Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#template-section)
+     2. [VPN Server Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#vpn-server-section)
+     3. [Access Credential Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#access-credentials-section)
+     4. [Device Group Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#device-groups-section)
+     5. [Certificate Authority Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#certificate-authority-ca-section)
+     6. [Certificate Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#certificates-section)
+     7. [Certificate and OpenVPN](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#certificates-and-openvpn)
 4. [Approach to Project](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#approach-to-project)
-    -[Let’s See What my approach will be through project, Step by Step](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-what-my-approach-will-be-through-project-step-by-step)
-        1. [what Programming laguagues we are using and why?](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#what-programming-laguagues-we-are-using-and-why)
-        2. [Lets walk through file selection and pseudocode](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-walk-through-file-selection-and-pseudocode)
-5. [Let’s See How OpenWISP will look like after this feature](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-how-openwisp-will-look-like-after-this-feature-step-by-step)
-6. [Reference](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#references-which-i-have-followed)
+   - [Let’s See What My Approach Will Be Through Project, Step by Step](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-what-my-approach-will-be-through-project-step-by-step)
+     1. [What Programming Languages We Are Using and Why?](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#what-programming-laguagues-we-are-using-and-why)
+     2. [Let’s Walk Through File Selection and Pseudocode](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-walk-through-file-selection-and-pseudocode)
+5. [Let’s See How OpenWISP Will Look Like After This Feature](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#lets-see-how-openwisp-will-look-like-after-this-feature-step-by-step)
+     1. [Template section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#1-templates-section-httpsdemoopenwispioadminconfigtemplate)
+     2. [Cetrificae Section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#2-certificates-section-httpsdemoopenwispioadminpkicert)
+     3. [Device group section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#3-device-groups-section-httpsdemoopenwispioadminconfigdevicegroup)
+     4. [CA section](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#4-ca-section-httpsdemoopenwispioadminpkica)
+6. [References](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#references-which-i-have-followed)
 
 ## Project Overview
 The X.509 Certificate Generator Templates aims to enhance the platform by adding a new feature that allows users to create X.509 certificates for secure browsing and other purposes, such as securing websites, or software signing, etc whereas it currently on supporting OpenVPN tunnels. 

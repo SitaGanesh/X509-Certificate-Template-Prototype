@@ -2,6 +2,9 @@
 
 ## Table of content
 1. [Project Overview](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main#project-overview)
+2. [Fundamentals](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main#fundamentals)
+3. [Organization and current state](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#organization-and-current-state)
+4. [Approach to Project](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/tree/main?tab=readme-ov-file#approach-to-project)
 
 
 ## Project Overview
@@ -298,7 +301,7 @@ class CertificateForm:
         save_to_database()
 ```
 
-### Let’s See How OpenWISP will look like after this feature, Step by Step
+## Let’s See How OpenWISP will look like after this feature, Step by Step
 
 Let’s walk through how the UI will change, focusing on the website dashboard and the new feature.
 

@@ -205,6 +205,12 @@ We are going to use these Python, Django, and JavaScript. And the integrating th
 
 **overall** *Python + Django*: Handle the backend logic (models, certificate generation, configuration integration) and generate the admin UI. *JavaScript*: Adds frontend interactivity, making the form user-friendly.
 
+
+**Florchart Diagram**
+
+![flowchart](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/flowchart.jfif)
+
+
 #### Lets walk through file selection and pseudocode
 **<ins> models.py </ins>** [openwisp-controller config models file](https://github.com/openwisp/openwisp-controller/blob/master/openwisp_controller/config/models.py): 
 
@@ -322,6 +328,9 @@ class CertificateForm:
 
 Let’s walk through how the UI will change, focusing on the website dashboard and the new feature.
 
+**System context diagram**
+
+![System context diagram](https://github.com/SitaGanesh/X509-Certificate-Template-Prototype/blob/main/Images/systemContext.jfif)
 
 #### 1. Templates Section ([https://demo.openwisp.io/admin/config/template/](https://demo.openwisp.io/admin/config/template/))
    

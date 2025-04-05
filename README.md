@@ -1,4 +1,4 @@
-# X509-Certificate-Template-Prototype
+# X509-Certificate-Generator-Template-Prototype
 
 ## Table of Contents
 
@@ -167,7 +167,7 @@ In the certificates section, we see a list of X509 certificates with columns lik
   - **CA**: A dropdown to pick the CA that will sign this certificate.
   - **Name**: A name for the certificate.
   - **Certificate and Private Key**: Fields to upload these if importing.
-Certificates here are mostly created for OpenVPN (e.g., for VPN servers or clients).
+Certificates here are mostly created for OpenVPN either for VPN servers or clients.
 
 [Certificates](https://demo.openwisp.io/admin/pki/cert/)
 
@@ -177,9 +177,9 @@ Certificates here are mostly created for OpenVPN (e.g., for VPN servers or clien
 
 
 #### Certificates and OpenVPN
-Right now, OpenWISP’s certificate system (under “PKI” > “Certificates”) is tied to OpenVPN. When you set up an OpenVPN server (in “Config” > “VPN”), OpenWISP uses a CA (from “PKI” > “CAs”) to automatically generate certificates for VPN clients. This is done through VPN templates (in “Config” > “Templates”).
+Right now, our OpenWISP’s certificate system  “Certificates” is tied to OpenVPN. When i set up an OpenVPN server “VPN”, it uses a CA “CAs” to automatically generate certificates for VPN clients. This is done through VPN templates “Templates”.
 
-There’s no option to create a certificate template for general purposes (e.g., for a website or IoT device). Certificates are only generated as part of the VPN setup process.
+We can see that there’s no option to create a certificate template for general purposes (e.g., for a website ). Currently Certificates are only generated as part of the VPN setup process.
 
 ## Approach to project
 ### Let’s See What my approach will be through project, Step by Step
@@ -195,13 +195,13 @@ Lets make this task more general:
 4. Integrate the certificate details into OpenWISP configuration system as variables (public key, private key, and UUID).
 
 #### **what Programming laguagues we are using and why?**
-We are going to use these Python, Django, and JavaScript. And the integrating this languages going to be done on Openwisp-controller repository which handles CA, django_x509(PKI) and others.
+We are going to use these Python, Django, and JavaScript. And the integrating this languages going to be done on Openwisp-controller repository which handles Certificate, Template, CA, django_x509(PKI).
 
 <ins> Python </ins> is the primary programming language used for the server-side application (web admin, API, controller, workers). In this project it defines the new Template type and fields for models.py and handles the logic for generating certificates and exposing variables.
 
 <ins> Django </ins> the most popular web frameworks for Python. It is used extensively in our modules, allowing rapid development and access to a rich ecosystem. Django’s admin.py module creates the UI for the new template type, and its forms.py system ensures users can select a CA and configure properties.
 
-<ins> JavaScript </ins> A language for adding interactivity to web pages. This are used to for making admin, forms dynamic while showing certificate-specific fields only when the “Certificate” type is selected.
+<ins> JavaScript </ins> A language for adding interactivity to web pages. This is used to for making admin, forms dynamic while showing certificate-specific fields only when the “Certificate” type is selected.
 
 **overall** *Python + Django*: Handle the backend logic (models, certificate generation, configuration integration) and generate the admin UI. *JavaScript*: Adds frontend interactivity, making the form user-friendly.
 
@@ -334,7 +334,7 @@ Let’s walk through how the UI will change, focusing on the website dashboard a
 - **CA**: The Certificate Authority linked to this template (from `ca` in `models.py`)
 - **Organization**: The group this template belongs to
 
-**Add Template Form:** When you click “Add Template,” the form now has a new option in the “Type” dropdown: “Certificate.” Selecting this type changes the form (via `template_form.js` from `admin.py`) to show certificate-specific fields from `TemplateForm` in `forms.py`:
+**Add Template Form:** When we click “Add Template,” the form now has a new option in the “Type” dropdown: “Certificate.” Selecting this type changes the form (via `template_form.js` from `admin.py`) to show certificate-specific fields from `TemplateForm` in `forms.py`:
 
 - **Name**: e.g., "Website Certificate Template"
 - **CA**: Dropdown to select a Certificate Authority (required per `validate()` in `forms.py`)
@@ -348,16 +348,16 @@ Let’s walk through how the UI will change, focusing on the website dashboard a
 
 #### 2. Certificates Section ([https://demo.openwisp.io/admin/pki/cert/](https://demo.openwisp.io/admin/pki/cert/))
 
-**What’s New:** Users can now generate certificates using your new template.
+**What’s New:** Users can now generate certificates using my new template.
 
-**What It Looks Like:** In the “Certificates” section, there’s a new way to create certificates. When you click “Add Certificate,” the form (from `CertificateForm` in `pki/admin.py`) now has an option to use a template:
+**What It Looks Like:** In the “Certificates” section, there’s a new way to create certificates. When they click “Add Certificate,” the form (from `CertificateForm` in `pki/admin.py`) now has an option to use a template:
 
 - **Options**: Dropdown with "create new", "import", "Generate from Template" (new option from `operation_type` in pseudocode)
 - **Template**: If we pick “Generate from Template,” a new dropdown appears to select your certificate template (filtered via `Template.objects.filter(type="certificate")`).
 - **Name**: A text box to name the certificate (e.g., “My Website Cert”).
 - **CA, Duration, Digest Algorithm**: These fields are auto-filled from the selected template (based on `models.py`) and are required when generating from a template, per the pseudocode logic.
 
-**Generated Certificate:** After saving, the certificate is created using the template’s settings via the `save()` method in `CertificateForm`. The list of certificates (from `CertificateAdmin.list_display`) now includes your new certificate, with details like:
+**Generated Certificate:** After saving, the certificate is created using the template’s settings via the `save()` method in `CertificateForm`. The list of certificates (from `CertificateAdmin.list_display`) now includes users new certificate, with details like:
 
 - "Name": e.g., "My Website Cert"
 - "CA": The CA from the template
@@ -366,15 +366,15 @@ Let’s walk through how the UI will change, focusing on the website dashboard a
 
 #### 3. Device Groups Section ([https://demo.openwisp.io/admin/config/devicegroup/](https://demo.openwisp.io/admin/config/devicegroup/))
 
-**What’s New:** Your certificate template can be assigned to device groups.
+**What’s New:** My certificate template can be assigned to device groups.
 
-**What It Looks Like:** In the “Device Groups” section, the “Templates” field includes a new certificate template (e.g., "Website Certificate Template") in the list of available templates, consistent with the `Template` model’s integration.
+**What It Looks Like:** In the “Device Groups” section, the “Templates” field includes a new certificate template in the list of available templates, consistent with the `Template` model’s integration.
 
 #### 4. CA Section ([https://demo.openwisp.io/admin/pki/ca/](https://demo.openwisp.io/admin/pki/ca/))
 
-**What’s New:** No changes to the CA section itself, but new template uses these CAs.
+**What’s New:** No changes to the CA section, but my new template uses these CAs.
 
-**What It Looks Like:** The CA section remains as is, but the `ca` field in the `Template` model links to these CAs, ensuring they are used when generating certificates via the new template.
+**What It Looks Like:** The CA section remains as is, but the `ca` field in the `Template` model links to these CAs, ensuring they are used when generating certificates via the my new template.
 
 
 
@@ -404,7 +404,7 @@ Let’s walk through how the UI will change, focusing on the website dashboard a
 
 4. <sup>YouTube</sup>   (Secure Soft)     <ins>X.509 Certificate Generator</ins>
 
-    What I Learned: I discovered a multipurpose certificate utility tool by Secure Soft via a short 2-minute video, showcasing how to generate X.509 certificates.
+    I discovered a multipurpose certificate utility tool by Secure Soft via a short 2-minute video, showcasing how to generate X.509 certificates.
 
     https://youtu.be/RMy-KPq20Hw?si=HCYmNiZY9Lj9-Rwg
 
